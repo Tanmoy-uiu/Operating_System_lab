@@ -1,1 +1,4 @@
-sd
+#!/bin/bash
+
+
+for file in 
