@@ -1,68 +1,34 @@
-# CPU Scheduling Algorithms in C++
+<div align="center">
 
-This project contains implementations of several classic CPU Scheduling Algorithms using C++.
+# ⚡ CPU Scheduling Algorithms in C++
 
-The project demonstrates both preemptive and non-preemptive scheduling techniques and calculates important scheduling metrics such as:
+### FIFO • SJF • STCF • Round Robin
 
-- Completion Time
-- Turnaround Time
-- Response Time
-- Average Turnaround Time
-- Average Response Time
-
----
-
-# Implemented Algorithms
-
-## 1. FIFO / FCFS (First Come First Serve)
-
-Processes are executed in the exact order they arrive.
-
-### Characteristics
-- Non-preemptive
-- Simple scheduling algorithm
-- Can suffer from convoy effect
+<img src="https://img.shields.io/badge/C%2B%2B-11-blue.svg">
+<img src="https://img.shields.io/badge/Algorithms-CPU%20Scheduling-green.svg">
+<img src="https://img.shields.io/badge/Status-Completed-brightgreen.svg">
+<img src="https://img.shields.io/badge/Platform-Linux%20%7C%20Windows-orange.svg">
 
 ---
 
-## 2. SJF (Shortest Job First)
+A collection of classic CPU Scheduling Algorithm implementations using C++.
 
-The process with the smallest burst time is selected first.
-
-### Characteristics
-- Non-preemptive
-- Minimizes average waiting time
-- Requires burst time prediction
+</div>
 
 ---
 
-## 3. STCF / SRTF (Shortest Time to Completion First)
+# 📚 Implemented Algorithms
 
-Preemptive version of SJF.
-
-At every time unit, the CPU selects the process with the shortest remaining burst time.
-
-### Characteristics
-- Preemptive
-- Better average turnaround time
-- Higher context switching
+| Algorithm | Type | Description |
+|---|---|---|
+| FIFO / FCFS | Non-Preemptive | Executes processes in arrival order |
+| SJF | Non-Preemptive | Selects shortest burst time |
+| STCF / SRTF | Preemptive | Selects shortest remaining time |
+| Round Robin | Preemptive | Uses fixed time quantum |
 
 ---
 
-## 4. Round Robin (RR)
-
-Each process gets CPU for a fixed time quantum.
-
-After the quantum expires, the process is moved to the back of the ready queue.
-
-### Characteristics
-- Preemptive
-- Fair scheduling
-- Good for time-sharing systems
-
----
-
-# Project Structure
+# 🗂️ Project Structure
 
 ```text
 .
@@ -75,10 +41,78 @@ After the quantum expires, the process is moved to the back of the ready queue.
 
 ---
 
-# Example Input Processes
+# ⚙️ Features
+
+✅ Completion Time Calculation  
+✅ Turnaround Time Calculation  
+✅ Response Time Calculation  
+✅ Average Metrics  
+✅ Preemptive Scheduling  
+✅ Non-Preemptive Scheduling  
+✅ Queue-Based Scheduling  
+
+---
+
+# 🧠 Algorithms Overview
+
+---
+
+## 🔹 FIFO / FCFS
+
+### 📌 Description
+Processes are executed exactly in the order they arrive.
+
+### 📌 Characteristics
+- Non-preemptive
+- Simple implementation
+- Can suffer from convoy effect
+
+---
+
+## 🔹 SJF (Shortest Job First)
+
+### 📌 Description
+The process with the smallest burst time is selected first.
+
+### 📌 Characteristics
+- Non-preemptive
+- Efficient average waiting time
+- Requires burst time prediction
+
+---
+
+## 🔹 STCF / SRTF
+
+### 📌 Description
+Preemptive version of SJF.
+
+CPU always selects the process with the shortest remaining burst time.
+
+### 📌 Characteristics
+- Preemptive
+- Better turnaround time
+- More context switching
+
+---
+
+## 🔹 Round Robin
+
+### 📌 Description
+Each process receives CPU for a fixed time quantum.
+
+After quantum expiration, the process moves to the back of the ready queue.
+
+### 📌 Characteristics
+- Preemptive
+- Fair scheduling
+- Suitable for time-sharing systems
+
+---
+
+# 📥 Example Input
 
 | Process | Arrival Time | Burst Time |
-|----------|--------------|-------------|
+|---|---|---|
 | P1 | 0 | 8 |
 | P2 | 1 | 4 |
 | P3 | 2 | 9 |
@@ -86,48 +120,50 @@ After the quantum expires, the process is moved to the back of the ready queue.
 
 ---
 
-# Metrics Calculated
+# 📊 Metrics Calculated
 
-## Completion Time (CT)
+## ✅ Completion Time (CT)
 
-The time at which a process finishes execution.
+The time when a process finishes execution.
 
 ---
 
-## Turnaround Time (TAT)
+## ✅ Turnaround Time (TAT)
 
 ```text
-Turnaround Time = Completion Time - Arrival Time
+TAT = Completion Time - Arrival Time
 ```
 
 ---
 
-## Response Time (RT)
+## ✅ Response Time (RT)
 
 ```text
-Response Time = First CPU Allocation Time - Arrival Time
+RT = First CPU Allocation Time - Arrival Time
 ```
 
 ---
 
-# Requirements
+# 🛠️ Requirements
 
 - C++11 or later
 - g++ compiler
 
 ---
 
-# Compilation Instructions
+# 🚀 Compilation & Execution
 
-## FIFO
+---
 
-Compile:
+## 🔹 FIFO
+
+### Compile
 
 ```bash
 g++ fifo.cpp -o fifo
 ```
 
-Run:
+### Run
 
 ```bash
 ./fifo
@@ -141,15 +177,15 @@ fifo
 
 ---
 
-## SJF
+## 🔹 SJF
 
-Compile:
+### Compile
 
 ```bash
 g++ sjf.cpp -o sjf
 ```
 
-Run:
+### Run
 
 ```bash
 ./sjf
@@ -163,15 +199,15 @@ sjf
 
 ---
 
-## STCF / SRTF
+## 🔹 STCF / SRTF
 
-Compile:
+### Compile
 
 ```bash
 g++ stcf.cpp -o stcf
 ```
 
-Run:
+### Run
 
 ```bash
 ./stcf
@@ -185,15 +221,15 @@ stcf
 
 ---
 
-## Round Robin
+## 🔹 Round Robin
 
-Compile:
+### Compile
 
 ```bash
 g++ round_robin.cpp -o rr
 ```
 
-Run:
+### Run
 
 ```bash
 ./rr
@@ -207,7 +243,7 @@ rr
 
 ---
 
-# Sample Output
+# 🖥️ Sample Output
 
 ```text
 ID      ARR     BURST   COMP    TAT     RESP
@@ -219,44 +255,47 @@ P4      3       5       17      14      9
 
 ---
 
-# Scheduling Types Comparison
+# 📈 Scheduling Comparison
 
 | Algorithm | Preemptive | Selection Rule |
-|------------|------------|----------------|
-| FIFO / FCFS | No | Arrival Order |
-| SJF | No | Shortest Burst |
-| STCF / SRTF | Yes | Shortest Remaining Time |
-| Round Robin | Yes | Fixed Time Quantum |
+|---|---|---|
+| FIFO / FCFS | ❌ No | Arrival Order |
+| SJF | ❌ No | Shortest Burst |
+| STCF / SRTF | ✅ Yes | Shortest Remaining Time |
+| Round Robin | ✅ Yes | Time Quantum |
 
 ---
 
-# Concepts Used
+# 🎯 Concepts Covered
 
 - CPU Scheduling
 - Operating Systems
 - Queues
 - Process Management
-- Preemptive Scheduling
-- Non-preemptive Scheduling
+- Time Sharing
 - Turnaround Time
 - Response Time
+- Preemptive Scheduling
+- Non-Preemptive Scheduling
 
 ---
 
-# Future Improvements
-
-Possible future additions:
+# 🔮 Future Improvements
 
 - Priority Scheduling
 - Lottery Scheduling
 - Multi-Level Feedback Queue (MLFQ)
-- Gantt Chart Visualization
 - Waiting Time Calculation
+- Gantt Chart Visualization
 
 ---
 
-# Author
+<div align="center">
 
-Tanmoy
+# 👨‍💻 Author
 
----
+## Tanmoy
+
+Made with ❤️ using C++
+
+</div>
